@@ -1,5 +1,19 @@
 # Changelog
 
+## [v0.1.1](https://github.com/iomarcovalente/helloworld-overkill/tree/v0.1.1) (2021-11-13)
+
+[Full Changelog](https://github.com/iomarcovalente/helloworld-overkill/compare/v0.1.0...v0.1.1)
+
+<img width="318" alt="Screenshot 2021-11-13 at 17 22 03" src="https://user-images.githubusercontent.com/12092106/141653073-4557433a-9b1f-4e13-af35-a5603b2b1d3a.png">
+
+First working implementation of Hello World web app! 
+Written in python3 with flask
+Creating a patch release to prove release functionality
+
+**Merged pull requests:**
+
+- Maint updates to release steps [\#2](https://github.com/iomarcovalente/helloworld-overkill/pull/2) ([iomarcovalente](https://github.com/iomarcovalente))
+
 ## [v0.1.0](https://github.com/iomarcovalente/helloworld-overkill/tree/v0.1.0) (2021-11-13)
 
 [Full Changelog](https://github.com/iomarcovalente/helloworld-overkill/compare/028971a3d8be206ea68c1be685f099b6751ae114...v0.1.0)

@@ -2,7 +2,7 @@
 
 set -ue
 
-TAG=`git tag | head -n1`
+TAG=`git tag | tail -n1`
 
 latest_release_tag=`gh release list | cut -d 'L' -f1 | awk '{$1=$1};1'`
 
