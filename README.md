@@ -6,11 +6,14 @@ Scope of this repo is to demonstrate a simple deployment pipeline for a "hello w
 
 Please find tech stack and tooling below:
 
-- Python3
-- flask
 - bash
+- curl
 - docker
+- flask
 - gh
+- jq
+- pip
+- Python3
 
 ## Usage
 
@@ -54,7 +57,7 @@ Releases follow below steps:
 
 - new docker image is built
 
-  `./build_and_push helloworld-overkill $TARGET_VERSION`
+  `./build_and_push.sh helloworld-overkill $TARGET_VERSION`
 
 - create new future milestone if needed
 
