@@ -15,7 +15,7 @@ Please find tech stack and tooling below:
 - pip
 - Python3
 
-## Usage
+## Usage
 
 This repo is to showcase various common use-cases and standard practices when developing a web app, as well as demonstrating other relevant functionalities. Usage of basic commands:
 - running a local docker registry and push built images to this local registry
