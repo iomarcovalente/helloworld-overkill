@@ -9,7 +9,7 @@ resource "aws_subnet" "private" {
     Name = "private-az${count.index + 1}"
   }
 
-  vpc_id = aws_vpc.helloworld_overkill.id
+  vpc_id = aws_vpc.main.id
 }
 
 # Public subnets
@@ -27,5 +27,5 @@ resource "aws_subnet" "public" {
     Name = "public-az${count.index + 1}"
   }
 
-  vpc_id = aws_vpc.helloworld_overkill.id
+  vpc_id = aws_vpc.main.id
 }

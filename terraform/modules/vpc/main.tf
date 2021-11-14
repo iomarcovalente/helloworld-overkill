@@ -1,5 +1,5 @@
 
-resource "aws_vpc" "helloworld_overkill" {
+resource "aws_vpc" "main" {
   cidr_block = "192.168.10.0/24"
 
   enable_dns_support   = true
@@ -12,7 +12,7 @@ resource "aws_vpc" "helloworld_overkill" {
 
 resource "aws_vpc_ipv4_cidr_block_association" "public" {
   cidr_block = "192.168.15.0/24"
-  vpc_id     = aws_vpc.helloworld_overkill.id
+  vpc_id     = aws_vpc.main.id
 }
 
 output "subnets" {
