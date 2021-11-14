@@ -14,8 +14,9 @@ Please find tech stack and tooling below:
 - jq
 - pip
 - Python3
+- github-changelog-generator
 
-## Usage
+## Usage
 
 This repo is to showcase various common use-cases and standard practices when developing a web app, as well as demonstrating other relevant functionalities. Usage of basic commands:
 - running a local docker registry and push built images to this local registry
@@ -36,14 +37,26 @@ This repo is to showcase various common use-cases and standard practices when de
 Chosen tagging scheme follows standard [semantic versioning](https://semver.org/).
 Pre-prod app will be tagged `v0.1.0` and will increase minor/patch version until production ready.
 
-#### Releases
+## Releases
 
-Milestones
+> NOTE: we use github-changelog-generator to automatically create releases, so below steps are relevant to facilitate automated changelog generation
 
-Releases follow below steps:
+Releases are based on a combination of multiple optional and non optional requirements:
+- one or multiple commit being pushed and a tag created
+  - __required__; we cannot create a release without changes
+- milestones met
+  - __optional__; we can create a milestone in advance to track issues and PRs or just create one for the purpose of creating a release, this applies only to facilitate automated changelog generation
+- issues closed
+  - __optional__; no need to close an issue to create a release
+- Pull Requests closed
+  - __optional__; no need to close PRs to create a release
+
+#### Release Steps
+
+Release process follow below steps:
 - a tag is created and pushed:
 
-  `git tag -a $TARGET_VERSION -m "First working version of helloworld web app" && git push --tags`
+  `git tag -a $TARGET_VERSION -m "$TAG_MESSAGE" && git push --tags`
 
 - an issue is opened and closed in github with relevant release summary:
 
@@ -61,7 +74,7 @@ Releases follow below steps:
 
   `./build_and_push.sh helloworld-overkill $TARGET_VERSION`
 
-- create new future milestone if needed
+- create new future milestone
 
   ```
     echo '{
@@ -73,5 +86,6 @@ Releases follow below steps:
   ```
 #### Workarounds
 
-Run following to manage milestones with `gh` (https://github.com/cli/cli/issues/1200):
- `gh alias set --shell createMilestone "gh api --method POST repos/:owner/:repo/milestones --input - | jq '{ html_url: .html_url, state: .state, created_at: .created_at }'"`
+- Manage milestones with `gh` (https://github.com/cli/cli/issues/1200); relevant command:
+
+      gh alias set --shell createMilestone "gh api --method POST repos/:owner/:repo/milestones --input - | jq '{ html_url: .html_url, state: .state, created_at: .created_at }'"
