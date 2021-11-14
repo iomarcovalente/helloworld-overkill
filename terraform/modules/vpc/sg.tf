@@ -27,7 +27,7 @@ resource "aws_security_group" "alb" {
   }
 
   tags = {
-    Name = join("",[var.stack_name, "-sg-alb"]
+    Name = join("",[var.stack_name, "-sg-alb"])
   }
 }
 
@@ -56,10 +56,10 @@ resource "aws_security_group" "ecs_tasks" {
   }
 }
 
-output "alb" {
+output "security_group_alb_id" {
   value = aws_security_group.alb.id
 }
 
-output "ecs_tasks" {
+output "security_group_ecs_tasks_id" {
   value = aws_security_group.ecs_tasks.id
 }

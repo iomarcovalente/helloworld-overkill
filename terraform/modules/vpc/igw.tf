@@ -3,6 +3,6 @@ resource "aws_internet_gateway" "main" {
 
   tags = {
     env = "dev"
-    Name = "helloworld-overkill"
+    Name = var.stack_name
   }
 }

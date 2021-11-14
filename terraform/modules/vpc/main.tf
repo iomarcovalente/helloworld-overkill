@@ -6,7 +6,7 @@ resource "aws_vpc" "main" {
   enable_dns_hostnames = true
 
   tags = {
-    Name = "helloworld-overkill"
+    Name = var.stack_name
   }
 }
 

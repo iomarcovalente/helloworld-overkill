@@ -26,6 +26,6 @@ resource "aws_ecr_lifecycle_policy" "helloworld_overkill" {
 EOF
 }
 
-output "ecr_repo_arn" {
-  value = aws_ecr_repository.helloworld_overkill.arn
+output "ecr_repo_url" {
+  value = aws_ecr_repository.helloworld_overkill.repository_url
 }
