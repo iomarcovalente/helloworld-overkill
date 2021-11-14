@@ -81,6 +81,8 @@ Release process follow below steps:
 
   `./build_and_push.sh helloworld-overkill $TARGET_VERSION`
 
+- commit updated CHANGELOG.md
+
 - create new future milestone
 
   ```

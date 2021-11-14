@@ -1,5 +1,23 @@
 # Changelog
 
+## [v0.1.2](https://github.com/iomarcovalente/helloworld-overkill/tree/v0.1.2) (2021-11-14)
+
+[Full Changelog](https://github.com/iomarcovalente/helloworld-overkill/compare/v0.1.1...v0.1.2)
+
+Creating a patch release to prove release functionality
+Latest patch with fixes
+
+**Closed issues:**
+
+- test automated creation [\#6](https://github.com/iomarcovalente/helloworld-overkill/issues/6)
+- test automated creation [\#5](https://github.com/iomarcovalente/helloworld-overkill/issues/5)
+- test automated creation [\#4](https://github.com/iomarcovalente/helloworld-overkill/issues/4)
+- App message not as per requirement [\#7](https://github.com/iomarcovalente/helloworld-overkill/issues/7)
+
+**Merged pull requests:**
+
+- Fix message [\#8](https://github.com/iomarcovalente/helloworld-overkill/pull/8) ([iomarcovalente](https://github.com/iomarcovalente))
+
 ## [v0.1.1](https://github.com/iomarcovalente/helloworld-overkill/tree/v0.1.1) (2021-11-13)
 
 [Full Changelog](https://github.com/iomarcovalente/helloworld-overkill/compare/v0.1.0...v0.1.1)
