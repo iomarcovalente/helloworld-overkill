@@ -28,6 +28,8 @@ This repo is to showcase various common use-cases and standard practices when de
   - build and push to local docker registry with `./build_and_push.sh helloworld-overkill v0.1.0 localhost:5000`
   - test functionality with `docker run --rm -p 8080:8080 localhost:5000/helloworld-overkill:latest`
   - check functionality in browser @ http://localhost:8080
+- creating cloud infrastructure
+  - 
 
 ## Tagging scheme
 
