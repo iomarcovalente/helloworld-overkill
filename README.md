@@ -30,12 +30,19 @@ This repo is to showcase various common use-cases and standard practices when de
   - test functionality with `docker run --rm -p 8080:8080 localhost:5000/helloworld-overkill:latest`
   - check functionality in browser @ http://localhost:8080
 - creating cloud infrastructure
-  - 
+  -
 
 ## Tagging scheme
 
 Chosen tagging scheme follows standard [semantic versioning](https://semver.org/).
 Pre-prod app will be tagged `v0.1.0` and will increase minor/patch version until production ready.
+
+## Deployment
+
+Cloud provider of choice is AWS.
+To deploy we use terraform.
+
+To start with, state will be stored locally.
 
 ## Releases
 
