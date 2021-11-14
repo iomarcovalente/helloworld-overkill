@@ -1,3 +1,23 @@
+resource "aws_route_table" "private" {
+  count  = length(var.subnet_cidrs.private)
+  vpc_id = aws_vpc.main.id
+
+  route {
+    cidr_block     = "0.0.0.0/0"
+    nat_gateway_id = element(aws_nat_gateway.main.*.id, count.index)
+  }
+}
+
+resource "aws_route_table_association" "private" {
+  count          = length(var.subnet_cidrs.private)
+  subnet_id      = element(aws_subnet.private.*.id, count.index)
+  route_table_id = element(aws_route_table.private.*.id, count.index)
+
+  depends_on = [
+    aws_route_table.private
+  ]
+}
+
 resource "aws_route_table" "public" {
   count = length(var.subnet_cidrs.public)
 
