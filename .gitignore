@@ -1,2 +1,11 @@
 **pycache**
 CHANGELOG.delta.md
+
+# Terraform related files
+**/terraform.tfvars
+**/terraform.tfstate
+**/terraform.tfstate.backup
+**/errored.tfstate*
+**/terraform.tfplan*
+**/main.tfplan*
+.terraform

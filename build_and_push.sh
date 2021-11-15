@@ -3,22 +3,23 @@
 set -ex
 
 if [[ -z ${1} ]];then
-    IMAGE_NAME=`gh repo view --json name | jq -r .name`
+    REGISTRY="localhost:5000"
 else
-    IMAGE_NAME=${1}
+    REGISTRY=${1}
 fi
 
 if [[ -z ${2} ]];then
-    TAG=$(git rev-parse --short HEAD)
+    IMAGE_NAME=`gh repo view --json name | jq -r .name`
 else
-    TAG=${2}
+    IMAGE_NAME=${2}
 fi
 
 if [[ -z ${3} ]];then
-    REGISTRY="localhost:5000"
+    TAG=$(git rev-parse --short HEAD)
 else
-    REGISTRY=${3}
+    TAG=${3}
 fi
+
 
 docker build -t ${REGISTRY}/${IMAGE_NAME}:${TAG} -t ${REGISTRY}/${IMAGE_NAME}:latest .
 
