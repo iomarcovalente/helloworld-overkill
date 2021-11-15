@@ -15,7 +15,14 @@ else
 fi
 
 if [[ -z ${3} ]];then
-    TAG=$(git rev-parse --short HEAD)
+    test_tag=`git rev-parse --short HEAD`
+
+    if [[ `git describe --tags --exact-match $test_tag` ]]; then
+        TAG=`git describe --tags --exact-match $test_tag`
+    else
+        echo "Setting tag to latest commig short hash:"
+        TAG=`git rev-parse --short HEAD`
+    fi
 else
     TAG=${3}
 fi
