@@ -1,5 +1,21 @@
 # Changelog
 
+## [v0.2.0](https://github.com/iomarcovalente/helloworld-overkill/tree/v0.2.0) (2021-11-15)
+
+[Full Changelog](https://github.com/iomarcovalente/helloworld-overkill/compare/v0.1.2...v0.2.0)
+
+Latest patch with fixes
+Completed infrastructure deployment with terraform on AWS
+
+**Closed issues:**
+
+- Deploy app to chosen cloud provider [\#10](https://github.com/iomarcovalente/helloworld-overkill/issues/10)
+- App message not as per requirement [\#7](https://github.com/iomarcovalente/helloworld-overkill/issues/7)
+
+**Merged pull requests:**
+
+- Feature cloud infra creation [\#20](https://github.com/iomarcovalente/helloworld-overkill/pull/20) ([iomarcovalente](https://github.com/iomarcovalente))
+
 ## [v0.1.2](https://github.com/iomarcovalente/helloworld-overkill/tree/v0.1.2) (2021-11-14)
 
 [Full Changelog](https://github.com/iomarcovalente/helloworld-overkill/compare/v0.1.1...v0.1.2)
