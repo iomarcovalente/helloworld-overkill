@@ -1,6 +1,6 @@
 # helloworld-overkill
 
-Scope of this repo is to demonstrate a (not-so) simple deployment pipeline for a "hello world" web app.
+Scope of this repo is to demonstrate a (_not-so_) simple deployment pipeline for a "hello world" web app.
 
 ## Tech stack
 
