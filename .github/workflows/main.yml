@@ -1,0 +1,14 @@
+name: PR Comment Trigger
+
+on:
+  issue_comment:
+    types:
+      - created  # Triggers when a new comment is created
+
+jobs:
+  trigger-on-comment:
+    if: github.event.issue.pull_request && contains(github.event.comment.body, '/run-workflow')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print message
+        run: echo "Workflow triggered by PR comment"
